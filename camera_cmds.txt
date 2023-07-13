@@ -1,0 +1,18 @@
+reboot yes
+format c:
+cam_check one
+svc_app stream_method rtsp
+svc_flow liveview
+sysinfo irq 144
+svc_rec start 1
+svc_rec stop 1
+cd c:
+cd NORMAL
+ls
+
+svc_app vsyncsrc 1
+svc_app format_id 1
+
+
+svc_flow liveview;sleep 15000;
+svc_rec start 1;sleep 15000;svc_rec stop 1
